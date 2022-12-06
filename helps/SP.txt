@@ -1,0 +1,75 @@
+
+
+select * from bolillas_juego;
+
+select * from bolillas_sorteo;
+
+DELIMITER //
+create procedure sp_rellenarbolillassorteo()
+begin
+truncate bolillas_sorteo;
+commit;
+insert into bolillas_sorteo (select * from bolillas_juego);
+end;
+
+call sp_rellenarbolillassorteo();
+
+DELIMITER $$
+create procedure sp_insertBolilla()
+begin
+declare idbolillassorteo01 INT;
+declare idbolillassorteo02 INT;
+declare idbolillassorteo03 INT;
+declare idbolillassorteo04 INT;
+declare idbolillassorteo05 INT;
+declare idbolillassorteo06 INT;
+
+SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo01;
+delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo01;
+
+SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo02;
+delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo02;
+
+SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo03;
+delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo03;
+
+SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo04;
+delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo04;
+
+SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo05;
+delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo05;
+
+SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo06;
+delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo06;
+
+insert sorteo values(null,idbolillassorteo01,idbolillassorteo02,idbolillassorteo03,idbolillassorteo04,idbolillassorteo05,idbolillassorteo06);
+
+call sp_rellenarbolillassorteo();
+
+commit;
+end;
+
+call  sp_insertBolilla();
+SELECT * FROM sorteo s;
+
+select count(1) from bolillas_sorteo;
+
+create procedure sp_borrarSorteo()
+truncate table jugada.sorteo;
+
+call sp_borrarSorteo();
+
+select* from clientepropuestosnatural n where n.
+
+
+
+
+
+
+
+
+
+
+
+
+
