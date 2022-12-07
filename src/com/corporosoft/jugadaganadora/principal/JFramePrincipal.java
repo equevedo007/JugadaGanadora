@@ -21,7 +21,7 @@ public class JFramePrincipal extends JFrame {
 	
 
 	public JFramePrincipal() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setResizable(false);
 		setSize(600,700);
 		setTitle("Edinson Ismael Quevedo Holguin");
 		getContentPane().setLayout(null);
@@ -107,6 +107,6 @@ public class JFramePrincipal extends JFrame {
 		btnBorrarSorteo.setBounds(422, 21, 152, 25);
 		getContentPane().add(btnBorrarSorteo);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+
 	}
 }
