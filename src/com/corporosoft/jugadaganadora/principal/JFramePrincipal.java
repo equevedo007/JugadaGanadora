@@ -106,6 +106,7 @@ public class JFramePrincipal extends JFrame {
 		btnBorrarSorteo.setFont(new Font("Tahoma", Font.BOLD, 16));
 		btnBorrarSorteo.setBounds(422, 21, 152, 25);
 		getContentPane().add(btnBorrarSorteo);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 	}
 }
