@@ -100,6 +100,7 @@ public class JFramePrincipal extends JFrame {
 				
 				ServicioJugadaGanadoraDAO servicio = new ServicioJugadaGanadoraDAO();
 				servicio.BorrarSorte();
+				System.out.println("Sorteo Borrado Correctamente");
 				textArea.setText("Sorteo Borrado Correctamente...!!!");
 			}
 		});
