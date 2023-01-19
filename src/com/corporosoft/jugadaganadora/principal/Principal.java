@@ -7,8 +7,6 @@ public class Principal {
 		JFramePrincipal jfmPrincipal = new JFramePrincipal();
 		jfmPrincipal.setVisible(true);
 
-		//Edinson
-
 	}
 
 }
