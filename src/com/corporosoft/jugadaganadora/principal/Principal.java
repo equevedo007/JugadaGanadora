@@ -6,6 +6,7 @@ public class Principal {
 				
 		JFramePrincipal jfmPrincipal = new JFramePrincipal();
 		jfmPrincipal.setVisible(true);
+		//se actualizo excel cc 10-02-2023
 
 	}
 
