@@ -40,7 +40,7 @@ public class JFramePrincipal extends JFrame {
 		getContentPane().add(textNumero);
 		textNumero.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Ingresar N\u00FAmero :");
+		JLabel lblNewLabel = new JLabel("Ingresar Numero :");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel.setBounds(10, 21, 158, 27);
 		getContentPane().add(lblNewLabel);
