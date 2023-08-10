@@ -6,12 +6,16 @@ import javax.swing.JScrollPane;
 import java.awt.Font;
 import javax.swing.JTextField;
 
+import com.corporosoft.jugadaganadora.bean.JugadaGanadoraBean;
+import com.corporosoft.jugadaganadora.bean.UltimaJugadaBean;
 import com.corporosoft.jugadaganadora.servicio.ServicioJugadaGanadoraDAO;
 
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class JFramePrincipal extends JFrame {
 	
@@ -65,7 +69,12 @@ public class JFramePrincipal extends JFrame {
 				String numero04 = servicio.obtenerNumero04().getNumero04();
 				String numero05 = servicio.obtenerNumero05().getNumero05();
 				String numero06 = servicio.obtenerNumero06().getNumero06();
-				
+
+				JugadaGanadoraBean ObjJugadaGanadoraBean = new JugadaGanadoraBean(numero01,numero02,numero03,numero04,numero05,numero06);
+
+				ArrayList<JugadaGanadoraBean> lista = new ArrayList<JugadaGanadoraBean>();
+				lista.add(ObjJugadaGanadoraBean);
+
 				
 				textArea.setText("Total Número de Registros -->>  "  + numero +"\n"+"\n") ;
 				textArea.append("El número 01 es : " + numero01+"\n");
@@ -83,7 +92,17 @@ public class JFramePrincipal extends JFrame {
 				 servicio.UltimaJugada().getNumero04()+"-"+
 				 servicio.UltimaJugada().getNumero05()+"-"+
 				 servicio.UltimaJugada().getNumero06()+"\n");
-				
+
+				textArea.append("Numeros mas salidos : " + lista.size())  ;
+				for (JugadaGanadoraBean jugada : lista) {
+					System.out.println("Numero 01: " + jugada.getNumero01());
+					System.out.println("Numero 02: " + jugada.getNumero02());
+					System.out.println("Numero 03: " + jugada.getNumero03());
+					System.out.println("Numero 04: " + jugada.getNumero04());
+					System.out.println("Numero 05: " + jugada.getNumero05());
+					System.out.println("Numero 06: " + jugada.getNumero06());
+					System.out.println("--------------------------------");
+				}
 				
 				
 				 

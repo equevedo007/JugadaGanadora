@@ -17,29 +17,29 @@ call sp_rellenarbolillassorteo();
 DELIMITER $$
 create procedure sp_insertBolilla()
 begin
-declare idbolillassorteo01 INT;
-declare idbolillassorteo02 INT;
-declare idbolillassorteo03 INT;
-declare idbolillassorteo04 INT;
-declare idbolillassorteo05 INT;
-declare idbolillassorteo06 INT;
+declare idbolillassorteo01 varchar(10);
+declare idbolillassorteo02 varchar(10);
+declare idbolillassorteo03 varchar(10);
+declare idbolillassorteo04 varchar(10);
+declare idbolillassorteo05 varchar(10);
+declare idbolillassorteo06 varchar(10);
 
-SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo01;
+SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo01;
 delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo01;
 
-SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo02;
+SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo02;
 delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo02;
 
-SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo03;
+SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo03;
 delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo03;
 
-SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo04;
+SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo04;
 delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo04;
 
-SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo05;
+SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo05;
 delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo05;
 
-SELECT s.idbolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo06;
+SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo06;
 delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo06;
 
 insert sorteo values(null,idbolillassorteo01,idbolillassorteo02,idbolillassorteo03,idbolillassorteo04,idbolillassorteo05,idbolillassorteo06);
@@ -47,7 +47,7 @@ insert sorteo values(null,idbolillassorteo01,idbolillassorteo02,idbolillassorteo
 call sp_rellenarbolillassorteo();
 
 commit;
-end;
+end
 
 call  sp_insertBolilla();
 SELECT * FROM sorteo s;
