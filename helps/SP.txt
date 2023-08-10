@@ -25,22 +25,22 @@ declare idbolillassorteo05 varchar(10);
 declare idbolillassorteo06 varchar(10);
 
 SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo01;
-delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo01;
+delete from bolillas_sorteo s where s.bolillassorteo=idbolillassorteo01;
 
 SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo02;
-delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo02;
+delete from bolillas_sorteo s where s.bolillassorteo=idbolillassorteo02;
 
 SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo03;
-delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo03;
+delete from bolillas_sorteo s where s.bolillassorteo=idbolillassorteo03;
 
 SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo04;
-delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo04;
+delete from bolillas_sorteo s where s.bolillassorteo=idbolillassorteo04;
 
 SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo05;
-delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo05;
+delete from bolillas_sorteo s where s.bolillassorteo=idbolillassorteo05;
 
 SELECT s.bolillassorteo FROM bolillas_sorteo s   ORDER BY RAND() LIMIT 0,1 into idbolillassorteo06;
-delete from bolillas_sorteo s where s.idbolillassorteo=idbolillassorteo06;
+delete from bolillas_sorteo s where s.bolillassorteo=idbolillassorteo06;
 
 insert sorteo values(null,idbolillassorteo01,idbolillassorteo02,idbolillassorteo03,idbolillassorteo04,idbolillassorteo05,idbolillassorteo06);
 
