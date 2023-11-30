@@ -44,3 +44,5 @@ INSERT INTO bolillas_juego VALUES (NULL,'43');
 INSERT INTO bolillas_juego VALUES (NULL,'44');
 INSERT INTO bolillas_juego VALUES (NULL,'45');
 INSERT INTO bolillas_juego VALUES (NULL,'46');
+INSERT INTO bolillas_juego VALUES (NULL,'47');
+INSERT INTO bolillas_juego VALUES (NULL,'48');

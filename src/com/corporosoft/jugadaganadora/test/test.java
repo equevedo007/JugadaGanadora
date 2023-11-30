@@ -7,11 +7,13 @@ import com.corporosoft.jugadaganadora.bean.Numero04;
 import com.corporosoft.jugadaganadora.bean.Numero05;
 import com.corporosoft.jugadaganadora.bean.Numero06;
 import com.corporosoft.jugadaganadora.servicio.ServicioJugadaGanadoraDAO;
+import com.corporosoft.jugadaganadora.utils.ConexionBD;
 
 
 public class test {
 
 	public static void main(String[] args) {
+
 		
 	
 		ServicioJugadaGanadoraDAO servicio = new ServicioJugadaGanadoraDAO();

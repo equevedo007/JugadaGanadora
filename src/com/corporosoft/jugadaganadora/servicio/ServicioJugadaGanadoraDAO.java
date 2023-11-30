@@ -1,5 +1,6 @@
 package com.corporosoft.jugadaganadora.servicio;
 
+
 import com.corporosoft.jugadaganadora.bean.Numero01;
 import com.corporosoft.jugadaganadora.bean.Numero02;
 import com.corporosoft.jugadaganadora.bean.Numero03;
@@ -9,12 +10,12 @@ import com.corporosoft.jugadaganadora.bean.Numero06;
 import com.corporosoft.jugadaganadora.bean.UltimaJugadaBean;
 import com.corporosoft.jugadaganadora.dao.DAOFactory;
 import com.corporosoft.jugadaganadora.interfaces.JugadaGanadoraDAO;
-import com.corporosoft.jugadaganadora.utils.Constante;
+import static com.corporosoft.jugadaganadora.utils.Constante.ORIGEN_DE_DATOS;
 
 public class ServicioJugadaGanadoraDAO {
 	
 
-	DAOFactory fabrica = DAOFactory.getDAOFactory(Constante.ORIGEN_DE_DATOS);
+	DAOFactory fabrica = DAOFactory.getDAOFactory(ORIGEN_DE_DATOS);
 	JugadaGanadoraDAO objJugadaGanadoraDAO=fabrica.getJugadaGanadoraDAO();
 	
 	public void BorrarSorte () {
