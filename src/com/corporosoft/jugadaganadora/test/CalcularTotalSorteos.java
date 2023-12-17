@@ -24,11 +24,6 @@ public class CalcularTotalSorteos {
 
         System.out.println("Suma total de domingos y miercoles: " + totalDays);
 
-
-
-
-
-
     }
 
     private static long countDaysBetween(LocalDate start, LocalDate end, DayOfWeek dayOfWeek) {
